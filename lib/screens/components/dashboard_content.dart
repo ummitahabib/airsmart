@@ -36,7 +36,7 @@ class _DashboardContentState extends State<DashboardContent> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
-                      flex: 5,
+                      flex: 4,
                       child: Column(
                         children: [
                           AnalyticCards(),

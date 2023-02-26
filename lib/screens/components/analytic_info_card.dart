@@ -45,7 +45,7 @@ class AnalyticInfoCard extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(
-              top: 35.0,
+              top: 23.0,
             ),
             child: Text(
               info.title!,

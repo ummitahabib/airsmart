@@ -50,3 +50,7 @@ const paraGr2 = TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.w500,
 );
+
+const hintTextStyle = TextStyle(color: Color(0xffA0A3BD), fontSize: 14);
+
+const formFilledColor = Color(0xffFCFCFC);

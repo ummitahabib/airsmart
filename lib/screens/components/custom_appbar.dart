@@ -4,6 +4,7 @@ import 'package:airsmartt/controllers/controller.dart';
 import 'package:airsmartt/screens/components/profile_info.dart';
 import 'package:airsmartt/screens/components/search_field.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import 'add_organization.dart';
@@ -20,7 +21,9 @@ class CustomAppbar extends StatelessWidget {
           children: [
             Text(
               'Organizations',
-              style: textStyle,
+              style: GoogleFonts.openSans(
+                  textStyle: textStyle
+              ),
             ),
             ProfileInfo()
           ],

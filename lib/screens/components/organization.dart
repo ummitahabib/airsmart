@@ -1,6 +1,9 @@
+import 'package:airsmartt/controllers/controller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../constants/constants.dart';
+import 'organization/organization_details.dart';
 import 'organization_item.dart';
 
 class Organization extends StatelessWidget {
@@ -21,17 +24,23 @@ class Organization extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            organize.orgName,
-            style: paraGr,
+          Expanded(
+            child: Text(
+              organize.orgName,
+              style: paraGr,
+            ),
           ),
-          Text(
-            organize.orgType,
-            style: paraGr,
+          Expanded(
+            child: Text(
+              organize.orgType,
+              style: paraGr,
+            ),
           ),
-          Text(
-            organize.orgDes,
-            style: paraGr,
+          Expanded(
+            child: Text(
+              organize.orgDes,
+              style: paraGr,
+            ),
           ),
           Column(
             children: [
@@ -42,6 +51,9 @@ class Organization extends StatelessWidget {
               )
             ],
           ),
+          SizedBox(
+            width: 10,
+          ),
           Column(
             children: [
               Text(organize.sector),
@@ -51,32 +63,55 @@ class Organization extends StatelessWidget {
               )
             ],
           ),
+          SizedBox(
+            width: 10,
+          ),
           Row(
             children: [
-              Container(
-                width: 86,
-                height: 36,
-                decoration: BoxDecoration(
-                    color: Color(0xffC1B497),
-                    borderRadius: BorderRadius.circular(8)),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 15.0,
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.remove_red_eye_outlined,
-                        color: Colors.white,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => ChangeNotifierProvider<Controller>(
+                        create: (_) => Controller(),
+                        child: const OrganizationDetailScreen(),
                       ),
-                      Text(
-                        'View',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                    ],
+                    ),
+                  );
+
+                  // Navigator.push(
+                  // Get.
+                  // context,
+                  // MaterialPageRoute(
+                  //     builder: (context) =>
+                  //         const OrganizationDetailScreen()));
+                },
+                child: Container(
+                  width: 86,
+                  height: 36,
+                  decoration: BoxDecoration(
+                      color: Color(0xffC1B497),
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 15.0,
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.remove_red_eye_outlined,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          'View',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

@@ -1,8 +1,8 @@
 import 'package:airsmartt/constants/constants.dart';
 import 'package:flutter/material.dart';
 
-import 'add_org_form.dart';
-import 'organization_item.dart';
+import '../organization_item.dart';
+import 'create_site_form.dart';
 
 class MyModalForm extends StatefulWidget {
   @override
@@ -24,15 +24,11 @@ class _MyModalFormState extends State<MyModalForm> {
       style: ElevatedButton.styleFrom(backgroundColor: primaryColor),
       child: Row(
         children: [
-          // SvgPicture.asset(
-          //   'assets/icons/add-circle.svg',
-          // ),
           Text(
             '+ ',
             style: TextStyle(color: Colors.white, fontSize: 30),
           ),
-
-          Text('Add Organization'),
+          Text('Create Site'),
         ],
       ),
       onPressed: () {
