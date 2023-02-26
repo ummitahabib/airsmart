@@ -27,39 +27,91 @@ class Organization extends StatelessWidget {
           Expanded(
             child: Text(
               organize.orgName,
-              style: paraGr,
+              style: TextStyle(
+                color: grayscaleLabel,
+                fontWeight: FontWeight.w500,
+                fontSize: MediaQuery.of(context).size.width > 600 ? 16 : 11,
+              ),
             ),
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.03,
           ),
           Expanded(
             child: Text(
               organize.orgType,
-              style: paraGr,
+              style: TextStyle(
+                color: grayscaleLabel,
+                fontWeight: FontWeight.w500,
+                fontSize: MediaQuery.of(context).size.width > 600 ? 16 : 11,
+              ),
             ),
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.03,
           ),
           Expanded(
             child: Text(
               organize.orgDes,
-              style: paraGr,
+              style: TextStyle(
+                color: grayscaleLabel,
+                fontWeight: FontWeight.w500,
+                fontSize: MediaQuery.of(context).size.width > 600 ? 16 : 11,
+              ),
             ),
           ),
-          Column(
-            children: [
-              Text(organize.sites),
-              Text(
-                'site',
-                style: paraGr2,
-              )
-            ],
+          Expanded(
+            child: Column(
+              children: [
+                Expanded(
+                    child: Text(
+                  organize.sites,
+                  style: TextStyle(
+                    color: grayscaleLabel,
+                    fontWeight: FontWeight.w500,
+                    fontSize: MediaQuery.of(context).size.width > 600 ? 16 : 11,
+                  ),
+                )),
+                Expanded(
+                  child: Text(
+                    'site',
+                    style: TextStyle(
+                      color: primaryColor500,
+                      fontSize:
+                          MediaQuery.of(context).size.width > 600 ? 16 : 11,
+                      //fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
           SizedBox(
             width: 10,
           ),
           Column(
             children: [
-              Text(organize.sector),
-              Text(
-                'Sector',
-                style: paraGr2,
+              Expanded(
+                child: Text(
+                  organize.sector,
+                  style: TextStyle(
+                    color: grayscaleLabel,
+                    fontWeight: FontWeight.w500,
+                    fontSize: MediaQuery.of(context).size.width > 600 ? 16 : 11,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Text(
+                  'Sector',
+                  style: TextStyle(
+                    color: primaryColor500,
+                    fontSize: MediaQuery.of(context).size.width > 600 ? 16 : 11,
+                    //fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
               )
             ],
           ),
@@ -125,7 +177,12 @@ class Organization extends StatelessWidget {
                     ),
                     Text(
                       'Edit',
-                      style: paraGr,
+                      style: TextStyle(
+                        color: grayscaleLabel,
+                        fontWeight: FontWeight.w500,
+                        fontSize:
+                            MediaQuery.of(context).size.width > 600 ? 16 : 8,
+                      ),
                     ),
                     SizedBox(
                       width: 10,
